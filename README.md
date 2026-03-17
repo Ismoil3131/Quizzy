@@ -1,20 +1,25 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Quizzy — Интерактивное приложение-викторина
 
-# Run and deploy your AI Studio app
+**Quizzy** — это современное веб-приложение для прохождения квизов по различным тематикам, разработанное на стеке React + TypeScript в рамках учебного проекта.
 
-This contains everything you need to run your app locally.
+## 🚀 Особенности проекта
 
-View your app in AI Studio: https://ai.studio/apps/6bfea224-4fb5-4ca3-b576-33b18f703617
+* **Динамический выбор тем:** Космос, футбол, страны мира, животные, история и наука.
+* **Система подсчета баллов:** Автоматический расчет результата в конце каждой игры.
+* **Адаптивный интерфейс:** Удобный дизайн, который корректно отображается на разных устройствах.
+* **Строгая типизация:** Использование TypeScript для повышения надежности кода и минимизации ошибок.
 
-## Run Locally
+## 🛠 Технологии
 
-**Prerequisites:**  Node.js
+* **Frontend:** React (Vite)
+* **Язык:** TypeScript / JavaScript
+* **Стилизация:** CSS3 (Custom Properties, Flexbox)
+* **Иконки:** Lucide-React
 
+## 📦 Установка и запуск
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Для запуска проекта локально выполните следующие шаги:
+
+1. Установите зависимости:
+   ```bash
+   npm install
