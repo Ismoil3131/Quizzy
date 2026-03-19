@@ -1,21 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import Question from './Question';
 import Answers from './Answers';
-import { QuestionData } from '../App';
 
 // Импорт локальных иконок обратной связи (PNG)
 import correctIcon from '../assets/icons/done_outline_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png';
 import incorrectIcon from '../assets/icons/cancel_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png';
 
-interface QuizProps {
-  questions: QuestionData[];
-  onFinish: (score: number, correctAnswers: number) => void;
-  onExit: () => void;
-}
-
-export default function Quiz({ questions, onFinish, onExit }: QuizProps) {
+// Мы удалили интерфейс QuizProps и импорт QuestionData, так как это TypeScript
+export default function Quiz({ questions, onFinish, onExit }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+  const [selectedAnswer, setSelectedAnswer] = useState(null); // Убрали <string | null>
   const [timeLeft, setTimeLeft] = useState(10);
   const [score, setScore] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
@@ -40,7 +34,8 @@ export default function Quiz({ questions, onFinish, onExit }: QuizProps) {
     return () => clearInterval(timer);
   }, [currentIndex, selectedAnswer, isTimeUp]);
 
-  const handleSelectAnswer = (answer: string) => {
+  // Убрали тип : string для параметра answer
+  const handleSelectAnswer = (answer) => {
     setSelectedAnswer(answer);
     if (answer === currentQuestion.answer) {
       const points = 10 * timeLeft;
