@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Question from './Question';
 import Answers from './Answers';
-import { QuestionData } from '../data/questions';
+import { QuestionData } from '../App';
 
 // Импорт локальных иконок обратной связи (PNG)
 import correctIcon from '../assets/icons/done_outline_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png';
@@ -78,7 +78,7 @@ export default function Quiz({ questions, onFinish, onExit }: QuizProps) {
             00:{timeLeft.toString().padStart(2, '0')}
           </div>
         </div>
-      </div>
+      </div>        
       
       <div className="quiz-body">
         <Question 

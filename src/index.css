@@ -235,10 +235,7 @@ body {
   animation: pulse 1s infinite;
 }
 
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
-}
+
 
 .stat-value.time-good {
   color: #4ade80;
