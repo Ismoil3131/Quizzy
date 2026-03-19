@@ -1,13 +1,4 @@
-export type Topic = 'space' | 'football' | 'countries' | 'animals' | 'history' | 'science';
-
-export interface QuestionData {
-  topic: Topic;
-  question: string;
-  options: string[];
-  answer: string;
-}
-
-export const questions: QuestionData[] = [
+export const questions = [
   // Space
   { topic: 'space', question: 'Какая планета самая большая в Солнечной системе?', options: ['Земля', 'Марс', 'Юпитер', 'Сатурн'], answer: 'Юпитер' },
   { topic: 'space', question: 'Как называется наша галактика?', options: ['Андромеда', 'Млечный Путь', 'Треугольник', 'Магелланово Облако'], answer: 'Млечный Путь' },
