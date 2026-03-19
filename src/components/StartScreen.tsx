@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Topic } from '../data/questions';
+import { Topic } from '../App';
 import { History as HistoryIcon } from 'lucide-react';
 
 // Импорт локальных иконок (PNG)
