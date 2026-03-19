@@ -3,11 +3,13 @@ import { Topic } from '../App';
 import { History as HistoryIcon } from 'lucide-react';
 
 // Импорт локальных иконок (PNG)
+import mixIcon from '../assets/icons/mix_24db.png'
 import scienceIcon from '../assets/icons/science_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png';
 import footballIcon from '../assets/icons/sports_soccer_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png';
 import countriesIcon from '../assets/icons/public_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png';
-import spaceIcon from '../assets/icons/planet-ringed.png';
-import animalsIcon from '../assets/icons/cow-alt.png';
+import spaceIcon from '../assets/icons/planet_24dp.png';
+import animalsIcon from '../assets/icons/animal_24dp.png';
+import historyIcon from '../assets/icons/history_24db.png';
 
 interface StartScreenProps {
   onStart: (topic: Topic | 'mix') => void;
@@ -17,12 +19,12 @@ export default function StartScreen({ onStart }: StartScreenProps) {
   const [selected, setSelected] = useState<Topic | 'mix'>('mix');
 
   const topics: { id: Topic | 'mix', name: string, icon: string | React.ReactNode }[] = [
-    { id: 'mix', name: 'Микс (Все темы)', icon: '🔀' },
+    { id: 'mix', name: 'Микс (Все темы)', icon: mixIcon },
     { id: 'space', name: 'Космос', icon: spaceIcon },
     { id: 'football', name: 'Футбол', icon: footballIcon },
     { id: 'countries', name: 'Страны мира', icon: countriesIcon },
     { id: 'animals', name: 'Животные', icon: animalsIcon },
-    { id: 'history', name: 'История', icon: <HistoryIcon size={24} /> },
+    { id: 'history', name: 'История', icon: historyIcon },
     { id: 'science', name: 'Наука', icon: scienceIcon }
   ];
 
